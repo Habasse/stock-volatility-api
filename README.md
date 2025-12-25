@@ -1,40 +1,43 @@
-# Volatility Forecast API (GARCH) — FastAPI
+# Volatility Forecast API (GARCH) - FastAPI
 
 ## Overview
-This project provides a lightweight **volatility forecasting API** based on **GARCH(p,q)** models.
-It is designed to help analysts, traders, and risk managers **monitor, forecast, and operationalize market volatility**.
+The project supplies a simple **volatility forecasting API** with implementations of **GARCH(p,q) models**.
 
-The API exposes two core endpoints:
-- **POST `/fit`**: trains a GARCH model for a given ticker and persists it to disk
-- **POST `/predict`**: loads the latest trained model and returns a forward volatility forecast
+It is meant to aid analysts, traders, and risk managers in **monitoring, forecasting, and operationalizing volatility in markets**.
+There are two major functions provided by the API. These are
 
-## Why it matters
-Volatility forecasting is a foundational component of quantitative finance and risk management.
+- **POST `/fit`**: trains a GARCH model for a specific ticker and saves the model to file
 
-This project can be used for:
-- volatility regime detection
-- risk monitoring and stress testing
-- position sizing and hedging decisions
-- scenario analysis and forward-looking risk metrics
+- **POST /predict**: loads the last trained model and generates a forecast of the forward volatility price
 
-The goal is not price prediction, but **risk-aware decision making**.
 
-## Tech stack
+## Why It Matters
+Forecasting volatility is an essential area in the framework of quantitative finance and risk management..
+This project can be utilized for:
+
+- volatility regime identification
+- risk monitoring & stress testing
+- Position sizing and hedging strategy
+- Scenario analysis and forward-looking risk metrics
+  
+Price forecasting is not the aim; instead, **risk-informed decision-making is the focus.**
+
+
+# Tech stack
 - Python
-- FastAPI + Pydantic (API & schema validation)
-- SQLite (local data persistence)
+- FastAPI + Pydantic (API and schema validation)
+- SQLite (Local Data Storage)
 - `arch` (GARCH modeling)
 - joblib (model serialization)
-- Yahoo Finance (market data ingestion)
+- Yahoo Finance (Ingestion of market data)
 
+## Workflow of the Project
 
-## Project workflow
-
-1. Fetch historical price data for a given ticker
-2. Compute log-returns
-3. Fit a GARCH(p,q) model on historical returns
+1. Retrieval of historical stock prices for a specific stock ticker
+2. Log-returns
+3. Estimating a GARCH model of order (p,q) based
 4. Persist the trained model
-5. Generate forward volatility forecasts via API calls
+5. Create forward volatility predictions through API calls
 
 ## Quickstart
 
