@@ -8,8 +8,6 @@ The API exposes two core endpoints:
 - **POST `/fit`**: trains a GARCH model for a given ticker and persists it to disk
 - **POST `/predict`**: loads the latest trained model and returns a forward volatility forecast
 
----
-
 ## Why it matters
 Volatility forecasting is a foundational component of quantitative finance and risk management.
 
@@ -21,8 +19,6 @@ This project can be used for:
 
 The goal is not price prediction, but **risk-aware decision making**.
 
----
-
 ## Tech stack
 - Python
 - FastAPI + Pydantic (API & schema validation)
@@ -31,7 +27,6 @@ The goal is not price prediction, but **risk-aware decision making**.
 - joblib (model serialization)
 - Yahoo Finance (market data ingestion)
 
----
 
 ## Project workflow
 
@@ -40,8 +35,6 @@ The goal is not price prediction, but **risk-aware decision making**.
 3. Fit a GARCH(p,q) model on historical returns
 4. Persist the trained model
 5. Generate forward volatility forecasts via API calls
-
----
 
 ## Quickstart
 
