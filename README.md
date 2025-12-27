@@ -98,7 +98,6 @@ Example response:
 Example response:
 
 ```json
-Example response:
 
 {
   "ticker": "GOOG",
