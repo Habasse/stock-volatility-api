@@ -45,54 +45,6 @@ Price forecasting is not the aim; instead, **risk-informed decision-making is th
 ```bash
 pip install -r requirements.txt
 
-2) Run the API
-
-uvicorn app.main:app --reload
-
-Open your browser at:
-
-http://127.0.0.1:8000/docs
-
-Example API Usage
-Train a GARCH model
-
-POST /fit
-
-{
-  "ticker": "GOOG",
-  "n_observations": 2520,
-  "p": 1,
-  "q": 1
-}
-
-Example response:
-
-{
-  "success": true,
-  "message": "Model trained and saved."
-}
-
-Forecast volatility
-
-POST /predict
-
-{
-  "ticker": "GOOG",
-  "n_days": 5
-}
-
-Example response:
-
-{
-  "ticker": "GOOG",
-  "n_days": 5,
-  "success": true,
-  "forecast": {
-    "2025-12-29": 1.787,
-    "2025-12-30": 1.788
-  }
-
-
 ```markdown
 ## Quickstart
 
@@ -154,9 +106,14 @@ Example response:
 Example response:
 
 ```json
+Example response:
+
 {
   "ticker": "GOOG",
   "n_days": 5,
-  "success": true
-}
+  "success": true,
+  "forecast": {
+    "2025-12-29": 1.787,
+    "2025-12-30": 1.788
+  }
 ```
