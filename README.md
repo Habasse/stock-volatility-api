@@ -91,4 +91,72 @@ Example response:
     "2025-12-29": 1.787,
     "2025-12-30": 1.788
   }
+
+
+```markdown
+## Quickstart
+
+### 1) Install dependencies
+
+```bash
+pip install -r requirements.txt
+````
+
+### 2) Run the API
+
+```bash
+uvicorn app.main:app --reload
+```
+
+Open your browser at:
+
+[http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
+
+---
+
+## Example API Usage
+
+### Train a GARCH model
+
+**POST** `/fit`
+
+```json
+{
+  "ticker": "GOOG",
+  "n_observations": 2520,
+  "p": 1,
+  "q": 1
 }
+```
+
+Example response:
+
+```json
+{
+  "success": true,
+  "message": "Model trained and saved."
+}
+```
+
+---
+
+### Forecast volatility
+
+**POST** `/predict`
+
+```json
+{
+  "ticker": "GOOG",
+  "n_days": 5
+}
+```
+
+Example response:
+
+```json
+{
+  "ticker": "GOOG",
+  "n_days": 5,
+  "success": true
+}
+```
