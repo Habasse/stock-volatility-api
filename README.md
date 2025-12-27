@@ -41,13 +41,14 @@ Price forecasting is not the aim; instead, **risk-informed decision-making is th
 
 ## Quickstart
 
-### Example API Usage
+### 1) Install dependencies
+```bash
+pip install -r requirements.txt
 
-### Train a GARCH model
+2) Run the API
 
-POST `/fit`
+uvicorn app.main:app --reload
 
-```json
 {
   "ticker": "GOOG",
   "n_observations": 2500,
@@ -55,12 +56,29 @@ POST `/fit`
   "q": 1
 }
 
-Response:
+
 {
   "success": true,
   "message": "Model trained and saved."
 }
 
-### 1) Install dependencies
-```bash
-pip install -r requirements.txt
+
+{
+  "ticker": "GOOG",
+  "n_days": 10
+}
+
+
+
+{
+  "ticker": "GOOG",
+  "n_days": 10,
+  "success": true,
+  "forecast": {
+    "2025-12-05": 0.72,
+    "2025-12-06": 0.73
+  }
+}
+
+
+
