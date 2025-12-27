@@ -44,14 +44,6 @@ Price forecasting is not the aim; instead, **risk-informed decision-making is th
 ### 1) Install dependencies
 ```bash
 pip install -r requirements.txt
-
-```markdown
-## Quickstart
-
-### 1) Install dependencies
-
-```bash
-pip install -r requirements.txt
 ````
 
 ### 2) Run the API
