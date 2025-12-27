@@ -41,6 +41,26 @@ Price forecasting is not the aim; instead, **risk-informed decision-making is th
 
 ## Quickstart
 
+### Example API Usage
+
+### Train a GARCH model
+
+POST `/fit`
+
+```json
+{
+  "ticker": "GOOG",
+  "n_observations": 2500,
+  "p": 1,
+  "q": 1
+}
+
+Response:
+{
+  "success": true,
+  "message": "Model trained and saved."
+}
+
 ### 1) Install dependencies
 ```bash
 pip install -r requirements.txt
