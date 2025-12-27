@@ -129,8 +129,3 @@ stock-volatility-api/
 ├─ requirements.txt
 ├─ .gitignore
 └─ README.md
-
-## Possible extensions
-- Add EGARCH / GJR-GARCH models
-- Add VaR and Expected Shortfall endpoints
-- Deploy API to a cloud provider
