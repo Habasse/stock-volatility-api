@@ -108,3 +108,24 @@ Example response:
     "2025-12-30": 1.788
   }
 ```
+
+## Project Structure
+
+stock-volatility-api/
+├─ app/
+│ ├─ init.py
+│ ├─ main.py # FastAPI app and routes
+│ ├─ schemas.py # Pydantic request/response models
+│ ├─ model.py # GARCH model logic
+│ ├─ data.py # Data ingestion (Yahoo Finance, SQLite)
+│ └─ config.py # Configuration settings
+├─ models/ # Saved trained models (.pkl)
+├─ scripts/
+│ └─ demo_client.py # Example API client
+├─ notebooks/
+│ └─ demo_api.ipynb # Exploration and testing
+├─ tests/
+│ └─ test_smoke.py # Basic API tests
+├─ requirements.txt
+├─ .gitignore
+└─ README.md
