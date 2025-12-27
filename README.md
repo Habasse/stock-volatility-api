@@ -49,6 +49,15 @@ pip install -r requirements.txt
 
 uvicorn app.main:app --reload
 
+Open your browser at:
+
+http://127.0.0.1:8000/docs
+
+Example API Usage
+Train a GARCH model
+
+**POST /fit**
+
 {
   "ticker": "GOOG",
   "n_observations": 2500,
